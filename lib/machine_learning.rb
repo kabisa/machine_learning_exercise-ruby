@@ -1,3 +1,4 @@
+require "machine_learning/classifier"
 require "machine_learning/tokenizer"
 require "machine_learning/tweet"
 require "machine_learning/unigram"
