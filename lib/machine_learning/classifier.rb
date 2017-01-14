@@ -11,7 +11,7 @@ class Classifier
 
   def conditional_probability(word, klass)
     occurrences_of_word_in_klass = 1 + (Unigram.where(word: word, klass: klass).first.try(:count) || 1)
-    vocabulary_size = Unigram.where(klass: klass).sum(:count) + Unigram.count
+    vocabulary_size = Unigram.where(klass: klass).sum(:count) + Unigram.select(:word).distinct.count
     occurrences_of_word_in_klass.to_f / vocabulary_size
   end
 
