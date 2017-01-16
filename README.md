@@ -13,7 +13,7 @@
   client = Twitter::REST::Client.new(config)
   ```
 
-## Populating the database with tweets
+## Obtaining a Training Set
 
 * Create a model to capture your tweets in. You will need to store the text of
   a tweet, as well as its sentiment, and the identifier of the tweet to prevent
@@ -27,11 +27,11 @@
 
 Twitter has a rate limit in place that expires every 15 minutes. In order
 to prevent yourself from getting locked out, severely limit the amount of calls
-while testing. If you do find yourself stranded, you can also download a
-database [here](https://github.com/lboekhorst/machine_learning_exercise/raw/master/machine_learning.sqlite3.example)
+while testing with `client.search(query, count: 100).take(100)`.
+If you do find yourself stranded, you can also download a database [here](https://github.com/lboekhorst/machine_learning_exercise/raw/master/machine_learning.sqlite3.example)
 that has been seeded with training tweets.
 
-## Training our classifier
+## Training our Classifier
 
 * Create a model to capture your unigrams in. You will need to store the actual
   word, as well as the context in which it was used, and the total amount of
@@ -49,7 +49,7 @@ uneven amount of weight would be placed upon those unigrams when classifying a
 tweet later on. You could for instance normalize your text with
 `text.downcase.gsub(/(@\S*|http\S*)/, '').split(/\W/).join(' ')`.
 
-## Classifying a tweet
+## Classifying Tweets
 
 * Calculate the prior probability for both the `positive` class, as well as the
   `negative` class. This is simply a matter of dividing the amount of tweets
@@ -75,7 +75,7 @@ tweet later on. You could for instance normalize your text with
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/lboekhorst/machine_learning.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lboekhorst/machine_learning_exercise.
 
 ## License
 
