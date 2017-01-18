@@ -1,4 +1,6 @@
-require "bundler/gem_tasks"
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require "rake/testtask"
 
 Dir.glob("lib/tasks/*.rake").each { |r| import r }
