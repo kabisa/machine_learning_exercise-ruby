@@ -1,6 +1,6 @@
 # Machine Learning in Ruby
 
-* Clone the repository with `git clone https://github.com/lboekhorst/machine_learning_exercise.git`
+* Clone the repository with `git clone https://github.com/kabisa/machine_learning_exercise-ruby.git`
 
 * Rename `twitter.yml.example` to `twitter.yml` and replace the credentials
   with your own. If you do not have credentials yet, create your application
@@ -28,7 +28,7 @@
 Twitter has a rate limit in place that expires every 15 minutes. In order
 to prevent yourself from getting locked out, severely limit the amount of calls
 while testing with `client.search(query, count: 100).take(100)`.
-If you do find yourself stranded, you can also download a database [here](https://github.com/lboekhorst/machine_learning_exercise/raw/master/machine_learning.sqlite3.example)
+If you do find yourself stranded, you can also download a database [here](https://github.com/kabisa/machine_learning_exercise-ruby/raw/master/machine_learning.sqlite3.example)
 that has been seeded with training tweets.
 
 ## Training our Classifier
@@ -75,7 +75,7 @@ tweet later on. You could for instance normalize your text with
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/lboekhorst/machine_learning_exercise.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kabisa/machine_learning_exercise-ruby.
 
 ## License
 
